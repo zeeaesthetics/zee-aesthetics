@@ -217,7 +217,6 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="brand-title">ZeeAesthetics Skin Laser & Dental Clinic</div>
     <div class="hamburger" id="hamburger-icon"><i class="fa-solid fa-bars"></i></div>
@@ -234,7 +233,6 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
   <section class="hero" id="home">
     <div class="logo-container">
       <img src="logo.jpg" alt="ZeeAesthetics Logo" class="logo-img">
@@ -255,7 +253,6 @@
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
   <section class="services-section" id="services">
     <span class="section-subtitle">OUR SERVICES</span>
     <h2 class="section-title">Premium Aesthetic Treatments</h2>
@@ -345,7 +342,6 @@
     </div>
   </section>
 
-  <!-- DENTAL SERVICES SECTION -->
   <section class="dental-section" id="dental-services">
     <span class="dental-subtitle">OUR DENTAL SERVICES</span>
     <h2 class="dental-title">Advanced Dental Care</h2>
@@ -411,7 +407,6 @@
     </div>
   </section>
 
-  <!-- ABOUT US SECTION -->
   <section class="about-section" id="about">
     <div class="about-container">
       <div class="about-content">
@@ -438,7 +433,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
-          <div class="stat-number"><span class="counter" data-target="100">0</span>+</div>
+          <div class="stat-number"><span class="counter" data-target="1000">0</span>+</div>
           <div class="stat-label">Treatments</div>
         </div>
         <div class="stat-card">
@@ -450,7 +445,6 @@
     </div>
   </section>
 
-  <!-- MEET OUR DOCTOR SECTION (ID matched to #doctor so hamburger menu works) -->
   <section class="doctor-section" id="doctor">
     <div class="doctor-container">
       <div class="doctor-image-container">
@@ -471,15 +465,11 @@
         <ul class="qualifications-list">
           <li>
             <i class="fa-solid fa-check-circle"></i>
-            <span><strong>Fellowship in Aesthetic Medicine</strong> by American Aesthetic Association</span>
-          </li>
-          <li>
-            <i class="fa-solid fa-check-circle"></i>
-            <span><strong>Aesthetic Physician & Cosmetologist</strong></span>
-          </li>
-          <li>
-            <i class="fa-solid fa-check-circle"></i>
             <span><strong>Dental Surgeon & Oral Physician</strong> B.D.S (RDS)</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check-circle"></i>
+            <span><strong>Certified orthodontist</strong> from california institute of cosmetic and surgical dentistry USA</span>
           </li>
           <li>
             <i class="fa-solid fa-check-circle"></i>
@@ -489,12 +479,19 @@
             <i class="fa-solid fa-check-circle"></i>
             <span><strong>Ex House Surgeon</strong> Nishtar Dental Hospital, Multan</span>
           </li>
+          <li>
+            <i class="fa-solid fa-check-circle"></i>
+            <span><strong>Fellowship in Aesthetic Medicine</strong> by American Aesthetic Association</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check-circle"></i>
+            <span><strong>Aesthetic Physician & Cosmetologist</strong></span>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- JAVASCRIPT SCRIPTS -->
   <script>
     // Hamburger Menu Toggle
     const hamburger = document.getElementById('hamburger-icon');
@@ -561,9 +558,7 @@
       startCounting();
     });
   </script>
-</body>
-</html>
-<!-- TESTIMONIALS SECTION -->
+
   <section class="testimonials-section" id="testimonials">
     <div class="testimonials-container">
       <span class="testimonials-subtitle">TESTIMONIALS</span>
@@ -583,13 +578,11 @@
         </div>
       </div>
 
-      <!-- Navigation Controls -->
       <div class="testimonial-controls">
         <button class="control-btn prev-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="control-btn next-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
       
-      <!-- Dots Indicator -->
       <div class="testimonial-dots" id="testimonial-dots">
         <span class="dot active" data-index="0"></span>
         <span class="dot" data-index="1"></span>
@@ -776,7 +769,6 @@
     const cardEl = document.getElementById('testimonial-card');
 
     function updateTestimonial(index) {
-      // Fade out effect
       cardEl.style.opacity = '0';
       cardEl.style.transform = 'translateY(10px)';
 
@@ -785,30 +777,25 @@
         nameEl.innerText = testimonialsData[index].name;
         serviceEl.innerText = testimonialsData[index].service;
 
-        // Update active dot
         dots.forEach((dot, i) => {
           dot.classList.toggle('active', i === index);
         });
 
-        // Fade in effect
         cardEl.style.opacity = '1';
         cardEl.style.transform = 'translateY(0)';
       }, 200);
     }
 
-    // Next Button Click
     nextBtn.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % testimonialsData.length;
       updateTestimonial(currentIndex);
     });
 
-    // Prev Button Click
     prevBtn.addEventListener('click', () => {
       currentIndex = (currentIndex - 1 + testimonialsData.length) % testimonialsData.length;
       updateTestimonial(currentIndex);
     });
 
-    // Dot Clicks
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
         currentIndex = index;
@@ -816,7 +803,7 @@
       });
     });
   </script>
-  <!-- BOOK APPOINTMENT SECTION -->
+
   <section class="appointment-section" id="appointment">
     <div class="appointment-container">
       <span class="appointment-subtitle">BOOK APPOINTMENT</span>
@@ -878,10 +865,9 @@
   </section>
 
   <style>
-    /* APPOINTMENT SECTION STYLING (White Background & Black Card) */
     .appointment-section {
       padding: 90px 6%;
-      background-color: #ffffff; /* Section background pure white */
+      background-color: #ffffff;
       text-align: center;
       font-family: 'Poppins', sans-serif;
     }
@@ -897,7 +883,7 @@
     .appointment-title {
       font-family: 'Playfair Display', serif;
       font-size: 2.6rem;
-      color: #070707; /* Dark title for white background */
+      color: #070707;
       margin-bottom: 15px;
       font-weight: 600;
     }
@@ -914,8 +900,8 @@
       margin: 0 auto;
     }
     .appointment-card {
-      background: #0f0f0f; /* Form card background black */
-      border: 1px solid rgba(203, 146, 70, 0.3); /* Luxury gold border */
+      background: #0f0f0f;
+      border: 1px solid rgba(203, 146, 70, 0.3);
       border-radius: 24px;
       padding: 45px 40px;
       text-align: left;
@@ -937,7 +923,7 @@
     .card-main-title {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      color: #ffffff; /* White text on black card */
+      color: #ffffff;
       margin-bottom: 8px;
       font-weight: 600;
     }
@@ -952,7 +938,7 @@
     }
     .form-group label {
       display: block;
-      color: #e0e0e0; /* Light label text for black card */
+      color: #e0e0e0;
       font-size: 0.88rem;
       font-weight: 500;
       margin-bottom: 8px;
@@ -966,7 +952,7 @@
       font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
       color: #ffffff;
-      background-color: #1a1a1a; /* Dark inputs inside black card */
+      background-color: #1a1a1a;
       outline: none;
       transition: all 0.3s ease;
     }
@@ -976,7 +962,6 @@
       background-color: #222222;
       box-shadow: 0 0 0 4px rgba(203, 146, 70, 0.15);
     }
-    /* Style options dropdown background for dark mode */
     .form-group select option {
       background-color: #1a1a1a;
       color: #ffffff;
@@ -1016,7 +1001,6 @@
   </style>
 
   <script>
-    // WhatsApp Form Submission Logic
     function sendToWhatsApp(event) {
       event.preventDefault();
       
@@ -1024,10 +1008,8 @@
       const service = document.getElementById('service-select').value;
       const date = document.getElementById('appointment-date').value;
 
-      // Doctor's WhatsApp Number
       const phoneNo = "923357412645";
 
-      // Build message string
       let message = `Hello Zee Aesthetics! I want to book an appointment.%0a%0a`;
       if (name) {
         message += `*Name:* ${name}%0a`;
@@ -1037,16 +1019,14 @@
         message += `*Preferred Date:* ${date}%0a`;
       }
 
-      // Redirect to WhatsApp URL
       const whatsappURL = `https://wa.me/${phoneNo}?text=${message}`;
       window.open(whatsappURL, '_blank');
     }
   </script>
-  <!-- FOOTER SECTION (Black Background) -->
+
   <footer class="footer-section" id="contact">
     <div class="footer-container">
       
-      <!-- Col 1: Brand & Bio -->
       <div class="footer-col">
         <h3 class="footer-brand">Zee <span>Aesthetics</span></h3>
         <p class="footer-bio">
@@ -1058,7 +1038,6 @@
         </div>
       </div>
 
-      <!-- Col 2: Quick Links -->
       <div class="footer-col">
         <h4 class="footer-heading">Quick Links</h4>
         <ul class="footer-links">
@@ -1070,7 +1049,6 @@
         </ul>
       </div>
 
-      <!-- Col 3: Popular Services (Updated) -->
       <div class="footer-col">
         <h4 class="footer-heading">Popular Services</h4>
         <ul class="footer-links">
@@ -1082,7 +1060,6 @@
         </ul>
       </div>
 
-      <!-- Col 4: Contact Us (Without Gmail) -->
       <div class="footer-col">
         <h4 class="footer-heading">Contact Us</h4>
         <ul class="footer-contact-info">
@@ -1094,19 +1071,21 @@
             <i class="fa-solid fa-phone"></i>
             <a href="tel:03357412645">0335-7412645</a>
           </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <span>Clinic Timings:<br>10:00 AM – 2:00 PM<br>4:00 PM – 9:00 PM</span>
+          </li>
         </ul>
       </div>
 
     </div>
 
-    <!-- Copyright Bottom Bar -->
     <div class="footer-bottom">
       <p>&copy; 2026 Zee Aesthetics. All rights reserved.</p>
     </div>
   </footer>
 
   <style>
-    /* FOOTER STYLING */
     .footer-section {
       background-color: #070707;
       color: #b3b3b3;
@@ -1226,14 +1205,13 @@
       .footer-section { padding: 60px 5% 20px; }
     }
   </style>
-  <!-- FLOATING CHAT ON WHATSAPP BUTTON -->
+
   <a href="https://wa.me/923357412645?text=Hello%20Zee%20Aesthetics!%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" class="floating-whatsapp-btn">
     <i class="fa-brands fa-whatsapp"></i>
     <span>Chat on WhatsApp</span>
   </a>
 
   <style>
-    /* GLOBAL GLASS MORPHISM EFFECT */
     .testimonial-card, 
     .appointment-card, 
     .footer-section, 
@@ -1244,7 +1222,6 @@
       border: 1px solid rgba(203, 146, 70, 0.2) !important;
     }
 
-    /* Input fields glass effect */
     .form-group input, 
     .form-group select {
       background: rgba(26, 26, 26, 0.6) !important;
@@ -1252,7 +1229,6 @@
       border: 1.5px solid rgba(203, 146, 70, 0.25) !important;
     }
 
-    /* FLOATING WHATSAPP BUTTON STYLING */
     .floating-whatsapp-btn {
       position: fixed;
       bottom: 25px;
@@ -1286,24 +1262,15 @@
     }
 
     @keyframes pulse-whatsapp {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-      }
-      70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
     @media (max-width: 768px) {
-      .floating-whatsapp-btn span {
-        display: none; /* Mobile par sirf icon dikhega ya compact look ke liye */
-      }
-      .floating-whatsapp-btn {
-        padding: 12px;
-        border-radius: 50%;
-      }
+      .floating-whatsapp-btn span { display: none; }
+      .floating-whatsapp-btn { padding: 12px; border-radius: 50%; }
     }
   </style>
+</body>
+</html>
